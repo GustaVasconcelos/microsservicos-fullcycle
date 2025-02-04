@@ -2,14 +2,14 @@
 namespace App\Models\Traits;
 use Ramsey\Uuid\Uuid;
 
-trait Uuid {
+trait UuidTrait {
     public static function boot() {
         parent::boot();
 
-        static::creting(function($obj) {
+        static::creating(function($obj) {
             if(!$obj->id) {
                 $obj->id = Uuid::uuid4();
             }
-        })
+        });
     }
 }

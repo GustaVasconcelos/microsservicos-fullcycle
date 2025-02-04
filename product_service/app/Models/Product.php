@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Traits\Uuid;
+use App\Models\Traits\UuidTrait;
 
 class Product extends Model
 {
-    use Uuid;
+    use UuidTrait;
 
     public $incrementing = false;
     protected $keyType = "string";
